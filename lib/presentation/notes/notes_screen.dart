@@ -19,7 +19,7 @@ class NotesScreen extends StatelessWidget {
         ),
       ),
       body: ListView(
-        padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 16.0),
         children: [
           GridView.count(
             crossAxisCount: 3,

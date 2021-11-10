@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/presentation/notes/notes_screen.dart';
+import 'package:note_app/ui/colors.dart';
 
 class AddEditNoteScreen extends StatelessWidget {
   const AddEditNoteScreen({Key? key}) : super(key: key);
@@ -12,84 +13,16 @@ class AddEditNoteScreen extends StatelessWidget {
         padding: EdgeInsets.only(top: 50),
         children: [
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.symmetric(vertical: 16),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text(''),
-                  style: ButtonStyle(
-                    side: MaterialStateProperty.all(
-                        BorderSide(width: 2.5, color: Colors.white)),
-                    minimumSize: MaterialStateProperty.all(Size(50, 50)),
-                    shape: MaterialStateProperty.all<OutlinedBorder>(
-                        CircleBorder()),
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(Color(0xFFE7ED9B)),
-                  ),
-                ),
-                MaterialButton(
-                  height: 50,
-                  shape: CircleBorder(
-                      side: BorderSide(width: 3.0, color: Colors.white)),
-                  elevation: 8.0,
-                  color: Color(0xFFE7ED9B),
-                  onPressed: () {},
-                ),
-                ElevatedButton(
-                    onPressed: () {},
-                    child: Text(''),
-                    style: ButtonStyle(
-                      side: MaterialStateProperty.all(
-                          BorderSide(width: 2.5, color: Colors.white)),
-                      minimumSize: MaterialStateProperty.all(Size(50, 50)),
-                      shape: MaterialStateProperty.all<OutlinedBorder>(
-                          CircleBorder()),
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                        Color(0xFFFFAB91),
-                      ),
-                    )),
-                ElevatedButton(
-                    onPressed: () {},
-                    child: Text(''),
-                    style: ButtonStyle(
-                      side: MaterialStateProperty.all(
-                          BorderSide(width: 2.5, color: Colors.white)),
-                      minimumSize: MaterialStateProperty.all(Size(50, 50)),
-                      shape: MaterialStateProperty.all<OutlinedBorder>(
-                          CircleBorder()),
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                        Color(0xFFCF94DA),
-                      ),
-                    )),
-                ElevatedButton(
-                    onPressed: () {},
-                    child: Text(''),
-                    style: ButtonStyle(
-                      side: MaterialStateProperty.all(
-                          BorderSide(width: 2.5, color: Colors.white)),
-                      minimumSize: MaterialStateProperty.all(Size(50, 50)),
-                      shape: MaterialStateProperty.all<OutlinedBorder>(
-                          CircleBorder()),
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                        Color(0xFF81DEEA),
-                      ),
-                    )),
-                ElevatedButton(
-                    onPressed: () {},
-                    child: Text(''),
-                    style: ButtonStyle(
-                      side: MaterialStateProperty.all(
-                          BorderSide(width: 2.5, color: Colors.white)),
-                      minimumSize: MaterialStateProperty.all(Size(50, 50)),
-                      shape: MaterialStateProperty.all<OutlinedBorder>(
-                          CircleBorder()),
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                        Color(0xFFF48FB1),
-                      ),
-                    )),
+                colorMaterialButton(),
+                colorMaterialButton(),
+                colorMaterialButton(),
+                colorMaterialButton(),
+                colorMaterialButton(),
               ],
             ),
           ),
@@ -115,7 +48,7 @@ class AddEditNoteScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){
+        onPressed: () {
           Navigator.pop(context);
           // Navigator.push(
           //   context,
@@ -124,6 +57,18 @@ class AddEditNoteScreen extends StatelessWidget {
         },
         child: const Icon(Icons.save),
         backgroundColor: const Color(0xFF25CBA5),
+      ),
+    );
+  }
+
+  Expanded colorMaterialButton() {
+    return Expanded(
+      child: MaterialButton(
+        height: 50,
+        shape: CircleBorder(side: BorderSide(width: 3.0, color: Colors.white)),
+        elevation: 8.0,
+        color: Color(0xFFE7ED9B),
+        onPressed: () {},
       ),
     );
   }
